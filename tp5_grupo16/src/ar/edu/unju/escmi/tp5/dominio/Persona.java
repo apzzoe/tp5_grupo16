@@ -12,7 +12,7 @@ package ar.edu.unju.escmi.tp5.dominio;
 	        this.apellido = apellido;
 	        this.direccion = direccion;
 	    }
-
+ 
 	    public int getDni() { return dni; }
 	    public String getNombre() { return nombre; }
 	    public String getApellido() { return apellido; }
