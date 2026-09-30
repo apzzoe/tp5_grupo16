@@ -9,7 +9,7 @@ public class Factura {
     private LocalDate fecha;
     private double total;
     private Cliente cliente;
-    private List<DetalleFactura> detalles; // composicion: sin factura no hay detalle
+    private List<DetalleFactura> detalles;
 
     public Factura(int nroF, LocalDate fecha, Cliente cliente) {
         this.nroF = nroF;
@@ -28,7 +28,6 @@ public class Factura {
         detalles.add(d);
     }
 
-    /** Suma los importes y aplica la regla de total de cada tipo de cliente. */
     public double calcularPrecioTotal() {
         double subtotal = 0;
         for (DetalleFactura d : detalles) {
@@ -49,6 +48,7 @@ public class Factura {
             System.out.printf("%-8d %-35s %12.2f %12.2f%n", d.getCantidad(),
                     d.getProducto().getDescripcion(), d.getPrecioUnitario(), d.getImporte());
         }
+        
         System.out.println("---------------------------------------");
         System.out.printf("TOTAL: $ %.2f%n", total);
         System.out.println("=======================================");

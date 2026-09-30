@@ -16,11 +16,15 @@ public class CollectionFactura {
         for (Factura f : collection) {
             if (f.getNroF() == nroF) return f;
         }
+        
         return null;
     }
 
     public static int siguienteNumero() {
         return collection.size() + 1;
     }
+    
 }
+
+
 
