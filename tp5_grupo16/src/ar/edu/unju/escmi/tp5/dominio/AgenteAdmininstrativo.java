@@ -1,4 +1,3 @@
-java
 package ar.edu.unju.escmi.tp5.dominio;
 
 import java.time.LocalDate;
