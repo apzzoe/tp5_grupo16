@@ -28,10 +28,10 @@ public class Main {
             Menu menu = null;
             switch (opcion) {
             case 1:
-                menu = new MenuAgenteVentas(sc, CollectionEmpleado.obtenerAgenteVentas());
+                menu = new MenuEncargadoDeVentas(sc, CollectionEmpleado.obtenerEncargadoDeVentas());
                 break;
             case 2:
-                menu = new MenuAgenteAdmin(sc, CollectionEmpleado.obtenerAgenteAdmin());
+                menu = new MenuAgenteAdministrativo(sc, CollectionEmpleado.obtenerAgenteAdministrativo());
                 break;
             case 3:
                 int dni = Entrada.leerInt(sc, "Ingrese su DNI: ");
