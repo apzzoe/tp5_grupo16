@@ -7,14 +7,14 @@ import ar.edu.unju.escmi.tp5.dominio.Producto;
 import ar.edu.unju.escmi.tp5.dominio.Stock;
 
 public class CollectionProducto {
-    public static List<Producto> collection = new ArrayList<>();
+    public static List<Producto> productos = new ArrayList<>();
 
     public static void agregarProducto(Producto producto) {
-        collection.add(producto);
+        productos.add(producto);
     }
 
     public static Producto buscarProducto(int codigo) {
-        for (Producto p : collection) {
+        for (Producto p : productos) {
             if (p.getCodigoP() == codigo) return p;
         }
         return null;
@@ -28,8 +28,8 @@ public class CollectionProducto {
         cargar(new Producto(1004, "Yerba Taragui x 1 kg", 3200.00, 0), 1500);
     }
 
-    private static void cargar(Producto p, int stock) {
-        agregarProducto(p);
-        CollectionStock.agregarStock(new Stock(p, stock));
+    private static void cargar(Producto producto, int stock) {
+        agregarProducto(producto);
+        CollectionStock.agregarStock(new Stock(producto, stock));
     }
 }
